@@ -1,4 +1,4 @@
-# RustGOL - Rust Game Of LIfe
+# rust_gol - Rust Game Of LIfe
 
 A simple implementation of Game of Life using Rust and minifb for rendering. 
 This is a simple toy application to experiment with Rust for rendering. This is not
