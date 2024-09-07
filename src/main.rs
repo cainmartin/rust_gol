@@ -35,12 +35,10 @@ fn main() {
         update_buffer(&mut world, &mut buffer);
         scale_buffer(&mut buffer, &mut scaled_buffer);
 
-        // We unwrap here as we want this code to exit if it fails
         window
             .update_with_buffer(&scaled_buffer, SCALED_WIDTH, SCALED_HEIGHT)
             .unwrap();
 
-        // Update the GOL world
         world.tick();
     }
 }
@@ -64,8 +62,8 @@ fn update_buffer(world: &mut World, buffer: &mut Vec<u32>) {
     }
 }
 
+// Upscales the buffer to the window resolution
 fn scale_buffer(buffer: &mut Vec<u32>, scaled_buffer: &mut Vec<u32>) {
-    // Fill the window buffer and scale it to the window size
     for y in 0..HEIGHT {
         for x in 0..WIDTH {
 
